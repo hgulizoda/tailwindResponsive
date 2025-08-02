@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind task</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green: {
+                400: "#0B7572",
+              },
+              gray: {
+                200: "#E9EAF2",
+                300: "#F9F9FB",
+                main: "#363738",
+                additional: "#6B6B6C",
+                line: "#D7D7DD",
+              },
+              orange: {
+                200: "#FFCE50",
+                400: "#FF9619",
+              },
+              white: {
+                400: "#ffffff", // ✅ wrapped in quotes
+              },
+            },
+            screens: {
+              sm: "400px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1440px",
+            },
+            fontFamily: {
+              exo2: ["'Exo 2'", "sans-serif"],
+            },
+            container: {
+              center: true,
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <section
+      class="xl:w-[1300px] w-[95%] flex flex-col lg:flex-row mx-auto mt-10 justify-between items-center gap-10 mb-[67px] md:text-center lg:text-left sm: text-left font-exo2"
+    >
+      <div>
+        <h1
+          class="lg:text-[52px] md:text-[44px] text-[28px] font-bold text-zinc-800 leading-[125%] mb-[40px] w-full"
+        >
+          Поставщик Дальнего Востока
+        </h1>
+        <p class="text-gray-500 leading-[150%] mb-[40px]">
+          Наши клиенты получают полный спектр услуг по работе с Китаем. Начиная
+          с подбора производителя заканчивая доставкой товара до двери.
+          Настолько прозрачных сделок с Китаем вы еще не осуществляли.
+        </p>
+        <button class="font-bold border-b-4 border-yellow-500">
+          Узнать больше
+        </button>
+      </div>
+      <img
+        src="./assests/images/adir-Cargo-Insurance 1 (1).png"
+        alt="Hero img"
+        class="rounded-4xl w-full h-[20rem] object-cover lg:h-full"
+      />
+    </section>
+
+    <section
+      class="xl:w-[1300px] w-[95%] lg:flex-row lg:gap-0 mx-auto rounded-[20px] md:shadow-none md:border-none lg:shadow-[0px_4px_20px_0px_#00000026] flex flex-col p-[24px_32px] gap-4 items-center mb-[67px] border-[1px] border-zinc-200 shadow-[0px_4px_20px_0px_#00000026]"
+    >
+      <div
+        class="lg:px-[64px] lg:shadow-none md:shadow-[0px_4px_20px_0px_#00000026] md:p-[32px] md:rounded-xl w-full md:mb-[20px]"
+      >
+        <div
+          class="flex items-center justify-center p-[21px] bg-zinc-100 rounded-[50%] md:w-[92px] mb-[24px] w-[68px]"
+        >
+          <img src="./assests/icons/factory.svg" alt="" />
+        </div>
+        <h2 class="font-bold text-[20px] mb-[16px]">
+          Поиск производителей по товару
+        </h2>
+        <p class="text-zinc-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod incididunt ut.
+        </p>
+      </div>
+      <div
+        class="lg:px-[64px] lg:shadow-none md:shadow-[0px_4px_20px_0px_#00000026] md:p-[32px] md:rounded-xl w-full md:mb-[20px] lg:border-x-1 border-zinc-300 lg:rounded-[0px]"
+      >
+        <div
+          class="flex items-center justify-center p-[21px] bg-zinc-100 rounded-[50%] md:w-[92px] mb-[24px] w-[68px]"
+        >
+          <img src="./assests/icons/factory.svg" alt="" />
+        </div>
+        <h2 class="font-bold text-[20px] mb-[16px]">
+          Доставка образцов товаров
+        </h2>
+        <p class="text-zinc-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod incididunt ut.
+        </p>
+      </div>
+      <div
+        class="lg:px-[64px] lg:shadow-none md:shadow-[0px_4px_20px_0px_#00000026] md:p-[32px] md:rounded-xl w-full md:mb-[20px]"
+      >
+        <div
+          class="flex items-center justify-center p-[21px] bg-zinc-100 rounded-[50%] md:w-[92px] mb-[24px] w-[68px]"
+        >
+          <img src="./assests/icons/factory.svg" alt="" />
+        </div>
+        <h2 class="font-bold text-[20px] mb-[16px]">
+          Поиск производителей по товару
+        </h2>
+        <p class="text-zinc-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod incididunt ut.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="relative xl:w-[1300px] w-[95%] mx-auto mb-[72px] md:h-[20rem] lg:h-[450px] h-[100px]"
+    >
+      <img
+        src="./assests/images/a truck.png"
+        alt=""
+        class="h-full object-cover pos w-full invisible md:visible"
+      />
+      <img
+        src="./assests/images/green.png"
+        alt=""
+        class="absolute top-0 left-0 h-full w-[80%] lg:w-[70%] invisible md:visible"
+      />
+      <h2
+        class="absolute lg:top-40 md:left-[90px] md:text-white lg:text-[48px] md:text-[44px] md:w-[30%] md:top-15 font-semibold text-zinc-800 text-[28px] top-10 w-full"
+      >
+        Почему с нами выгоднее?
+      </h2>
+    </section>
+
+    <section
+      class="w-[95%] mx-auto lg:w-[1240px] mx-auto flex flex-wrap gap-y-[62px] lg:gap-x-[70px] mb-[120px] items-center lg:grid grid-cols-2"
+    >
+      <div class="flex md:gap-[40px] gap-6 justify-center w-full">
+        <div
+          class="flex items-center justify-center md:h-[80px] h-[52px] bg-zinc-100 rounded-[50%] md:w-[80px] w-[52px] mb-[24px]"
+        >
+          <img src="./assests/icons/lock.svg" alt="" class="w-[60%]" />
+        </div>
+        <div>
+          <h2 class="font-bold text-[20px] mb-[16px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod ut.
+          </p>
+        </div>
+      </div>
+      <div class="flex md:gap-[40px] gap-6 w-full justify-center">
+        <div
+          class="flex items-center justify-center bg-zinc-100 rounded-[50%] md:w-[80px] md:h-[80px] h-[52px] w-[52px] mb-[24px]"
+        >
+          <img src="./assests/icons/checklist.svg" alt="" class="w-[60%]" />
+        </div>
+        <div>
+          <h2 class="font-bold text-[20px] mb-[16px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod ut.
+          </p>
+        </div>
+      </div>
+      <div class="flex md:gap-[40px] gap-6 justify-center w-full">
+        <div
+          class="flex items-center justify-center bg-zinc-100 rounded-[50%] mb-[24px] md:w-[80px] md:h-[80px] h-[52px] w-[52px]"
+        >
+          <img src="./assests/icons/dollar.svg" alt="" class="w-[60%]" />
+        </div>
+        <div>
+          <h2 class="font-bold text-[20px] mb-[16px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod ut.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center w-full md:gap-[40px] gap-6">
+        <div
+          class="flex items-center justify-center md:h-[80px] h-[52px] w-[52px] bg-zinc-100 rounded-[50%] md:w-[80px] mb-[24px]"
+        >
+          <img src="./assests/icons/location.svg" alt="" class="w-[60%]" />
+        </div>
+        <div>
+          <h2 class="font-bold text-[20px] mb-[16px]">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur <br />
+            adipiscing elit, sed do eiusmod ut.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="xl:w-[1300px] w-[95%] mx-auto mb-[212px]">
+      <h2 class="font-semibold lg:text-[48px] md:text-[44px] text-[28px]">
+        Выполненные работы
+      </h2>
+      <p class="text-zinc-600 lg:w-[39%] mb-[56px] w-full">
+        Мы собрали информацию по грузам, которые мы уже доставили.У нас
+        специальный подход к каждому виду товаров.
+      </p>
+      <div class="flex lg:justify-between flex-col lg:flex-row items-center">
+        <div
+          class="lg:w-[32%] shadow-[0px_4px_15px_0px_#0000001F] rounded-xl w-full"
+        >
+          <img
+            src="./assests/images/lifting.png"
+            alt=""
+            class="mb-[24px] w-full h-[230px] object-cover rounded-[20px_20px_0_0]"
+          />
+          <h2 class="font-bold text-[20px] mb-[16px] mx-[32px]">
+            Станки и оборудование
+          </h2>
+          <p class="text-zinc-600 mb-[32px] mx-[32px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ut.
+          </p>
+          <button
+            class="font-bold border-b-4 border-yellow-500 ml-[32px] mb-[32px]"
+          >
+            20 000 руб.
+          </button>
+        </div>
+        <div
+          class="lg:w-[32%] shadow-[0px_4px_15px_0px_#0000001F] rounded-xl hidden md:inline-block w-full mt-6 lg:mt-0"
+        >
+          <img
+            src="./assests/images/lifting.png"
+            alt=""
+            class="mb-[24px] w-full h-[230px] object-cover rounded-[20px_20px_0_0]"
+          />
+          <h2 class="font-bold text-[20px] mb-[16px] mx-[32px]">
+            Станки и оборудование
+          </h2>
+          <p class="text-zinc-600 mb-[32px] mx-[32px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ut.
+          </p>
+          <button
+            class="font-bold border-b-4 border-yellow-500 ml-[32px] mb-[32px]"
+          >
+            20 000 руб.
+          </button>
+        </div>
+        <div
+          class="w-[32%] shadow-[0px_4px_15px_0px_#0000001F] rounded-xl hidden lg:inline-block"
+        >
+          <img
+            src="./assests/images/lifting.png"
+            alt=""
+            class="mb-[24px] w-full h-[230px] object-cover rounded-[20px_20px_0_0]"
+          />
+          <h2 class="font-bold text-[20px] mb-[16px] mx-[32px]">
+            Станки и оборудование
+          </h2>
+          <p class="text-zinc-600 mb-[32px] mx-[32px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ut.
+          </p>
+          <button
+            class="font-bold border-b-4 border-yellow-500 ml-[32px] mb-[32px]"
+          >
+            20 000 руб.
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-teal-600 xl:w-[1300px] w-full aspect-[12/9] mx-auto lg:p-[85px_66px_85px_81px] p-[60px_20px] flex flex-col lg:flex-row mb-[120px]"
+    >
+      <h2
+        class="text-white lg:text-[48px] md:text-[44px] text-[28px] w-[30%] font-semibold"
+      >
+        Привлеченные клиенты
+      </h2>
+      <div class="bg-white p-[28px_40px_40px_40px] lg:w-[60%] rounded-[8px]">
+        <div
+          class="flex justify-between lg:gap-[180px] gap-8 md:border-b-1 border-zinc-300 pb-[32px]"
+        >
+          <img src="./assests/icons/biglogo.svg" alt="" />
+          <p class="text-[11px] text-zinc-600 hidden md:inline">
+            ООО "ПДВ" ИНН 7329023100 КПП 732901001 433405, Ульяновская обл.,
+            Территория Портовой особой Экономической зоны, Проезд Первых
+            Резидентов 3 Телефон: +7 8422 99 666 5 e-mail: info@pdv.ooo
+          </p>
+        </div>
+
+        <div class="w-[100%] mx-auto md:hidden">
+          <p class="bg-teal-600 p-[10px_100px] text-white text-left">
+            Клиент №1
+          </p>
+          <div class="flex gap-4 p-3 border-b-1 border-zinc-300 items-center">
+            <img
+              src="./assests/images/metal.jpg"
+              alt=""
+              class="w-[30%] mx-auto aspect-[7/6] object-cover"
+            />
+            <div>
+              <p class="text-[14px] text-zinc-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod ut.
+              </p>
+              <b class="text-[14px] font-bold">120 000 руб.</b>
+            </div>
+          </div>
+          <div class="p-3 border-b-1 border-zinc-300">
+            <b class="text-[14px] font-bold">Завод “Hlobalkhim”</b>
+            <p class="text-[14px] text-zinc-600 mb-[12px]">
+              г. Москва, проспект Кутузовский, д. 12 стр. 1 этаж, пом. 1г.
+            </p>
+            <div class="flex">
+              <svg
+                width="12"
+                height="11"
+                viewBox="0 0 12 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                  fill="#FFCE50"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="11"
+                viewBox="0 0 12 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                  fill="#FFCE50"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="11"
+                viewBox="0 0 12 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                  fill="#FFCE50"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="11"
+                viewBox="0 0 12 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                  fill="#FFCE50"
+                />
+              </svg>
+              <svg
+                width="12"
+                height="11"
+                viewBox="0 0 12 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                  fill="#CACACD"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.11925 2.0686L4.34107 3.6283L0.302734 4.20773L3.22705 7.0221L2.53078 11.0091L5.11925 9.66774V2.0686Z"
+                  fill="#F8C642"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="p-3">
+            <b class="text-[14px] font-bold">Коваль Иван Борисович</b>
+            <p class="text-[14px] text-zinc-600">
+              Руководитель отдела поставок
+            </p>
+            <p class="text-[14px] text-zinc-800">+ 7 (495) 765 33 22</p>
+          </div>
+        </div>
+        <table
+          class="border-collapse mt-[36px] divide-x-1 divide-zinc-300 w-full transform scale-0 hidden md:inline-block md:scale-85 lg:scale-100"
+        >
+          <thead>
+            <tr class="divide-x-1 divide-zinc-500">
+              <th class="bg-teal-600 p-[10px_36px] text-white">Фото</th>
+              <th class="bg-teal-600 p-[10px_36px] text-white">Название</th>
+              <th class="bg-teal-600 p-[10px_36px] text-white">
+                Производитель
+              </th>
+              <th class="bg-teal-600 p-[10px_45px] text-white">Контакт</th>
+            </tr>
+          </thead>
+          <tbody class="bg-zinc-100">
+            <tr class="divide-x-1 divide-zinc-300 divide-y-1">
+              <td>
+                <img
+                  src="./assests/images/metal.jpg"
+                  alt=""
+                  class="w-[80%] mx-auto aspect-[7/6] object-cover"
+                />
+              </td>
+              <td class="p-[16px]">
+                <p class="text-[14px] text-zinc-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod ut.
+                </p>
+                <b class="text-[14px] font-bold">120 000 руб.</b>
+              </td>
+              <td class="p-[16px]">
+                <b class="text-[14px] font-bold">Завод “Hlobalkhim”</b>
+                <p class="text-[14px] text-zinc-600 mb-[12px]">
+                  г. Москва, проспект Кутузовский, д. 12 стр. 1 этаж, пом. 1г.
+                </p>
+                <div class="flex">
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#CACACD"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.11925 2.0686L4.34107 3.6283L0.302734 4.20773L3.22705 7.0221L2.53078 11.0091L5.11925 9.66774V2.0686Z"
+                      fill="#F8C642"
+                    />
+                  </svg>
+                </div>
+              </td>
+              <td class="p-[16px] border-zinc-300 border-b-1">
+                <b class="text-[14px] font-bold">Коваль Иван Борисович</b>
+                <p class="text-[14px] text-zinc-600">
+                  Руководитель отдела поставок
+                </p>
+                <p class="text-[14px] text-zinc-800">+ 7 (495) 765 33 22</p>
+              </td>
+            </tr>
+            <tr class="divide-x-1 divide-zinc-300 divide-y-1">
+              <td>
+                <img
+                  src="./assests/images/metal.jpg"
+                  alt=""
+                  class="w-[80%] mx-auto aspect-[7/6] object-cover"
+                />
+              </td>
+              <td class="p-[16px]">
+                <p class="text-[14px] text-zinc-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod ut.
+                </p>
+                <b class="text-[14px] font-bold">50 000 руб.</b>
+              </td>
+              <td class="p-[16px]">
+                <b class="text-[14px] font-bold"
+                  >Даниловский строительный завод</b
+                >
+                <p class="text-[14px] text-zinc-600 mb-[12px]">
+                  Москва, Даниловская наб., д. 8 стр. 1 этаж, пом. 2
+                </p>
+                <div class="flex">
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                </div>
+              </td>
+              <td class="p-[16px] border-zinc-300 border-b-1">
+                <b class="text-[14px] font-bold">Лубен Валерий Вячеславович</b>
+                <p class="text-[14px] text-zinc-600">
+                  Руководитель отдела поставок
+                </p>
+                <p class="text-[14px] text-zinc-800">+ 7 (495) 765 33 22</p>
+              </td>
+            </tr>
+            <tr class="divide-x-1 divide-zinc-300">
+              <td>
+                <img
+                  src="./assests/images/metal.jpg"
+                  alt=""
+                  class="w-[80%] mx-auto aspect-[7/6] object-cover"
+                />
+              </td>
+              <td class="p-[16px]">
+                <p class="text-[14px] text-zinc-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod ut.
+                </p>
+                <b class="text-[14px] font-bold">120 000 руб.</b>
+              </td>
+              <td class="p-[16px]">
+                <b class="text-[14px] font-bold">Завод “Hlobalkhim”</b>
+                <p class="text-[14px] text-zinc-600 mb-[12px]">
+                  г. Москва, проспект Кутузовский, д. 12 стр. 1 этаж, пом. 1г.
+                </p>
+                <div class="flex">
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#FFCE50"
+                    />
+                  </svg>
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 0L4.14286 3.62531L0 4.20426L3 7.01629L2.28571 11L6 9.12531L9.71429 11L9 7.01629L12 4.20426L7.85714 3.62531L6 0Z"
+                      fill="#CACACD"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.11925 2.0686L4.34107 3.6283L0.302734 4.20773L3.22705 7.0221L2.53078 11.0091L5.11925 9.66774V2.0686Z"
+                      fill="#F8C642"
+                    />
+                  </svg>
+                </div>
+              </td>
+              <td class="p-[16px]">
+                <b class="text-[14px] font-bold">Коваль Иван Борисович</b>
+                <p class="text-[14px] text-zinc-600">
+                  Руководитель отдела поставок
+                </p>
+                <p class="text-[14px] text-zinc-800">+ 7 (495) 765 33 22</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="xl:w-[1300px] w-[95%] mx-auto mb-[100px]">
+      <h2
+        class="font-semibold lg:text-[48px] md:text-[44px] text-[28px] mb-[48px]"
+      >
+        Этапы поставки
+      </h2>
+      <div
+        class="lg:p-[32px_96px] p-[32px_40px] flex gap-[32px] shadow-[0px_4px_15px_0px_#0000001F] mb-[24px] rounded-xl"
+      >
+        <img
+          src="./assests/images/handshake.png"
+          alt=""
+          class="hidden lg:inline-block"
+        />
+        <div>
+          <b class="text-[20px]">Предложение от продавца</b>
+          <hr
+            class="border-yellow-500 border-1 w-[86px] my-[24px] hidden md:block"
+          />
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <span class="hidden md:inline"
+              >Elit duis tristique sollicitudin nibh sit amet. Ultrices eros in
+              cursus turpis massa tincidunt. Venenatis urna cursus eget nunc
+              scelerisque viverra mauris in.</span
+            >
+          </p>
+        </div>
+      </div>
+      <div
+        class="lg:p-[32px_96px] p-[32px_40px] flex gap-[32px] shadow-[0px_4px_15px_0px_#0000001F] mb-[24px] rounded-xl"
+      >
+        <img
+          src="./assests/images/cargo.png"
+          alt=""
+          class="hidden lg:inline-block"
+        />
+        <div>
+          <b class="text-[20px]">Доставка</b>
+          <hr
+            class="border-yellow-500 border-1 w-[86px] my-[24px] hidden md:block"
+          />
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <span class="hidden md:inline"
+              >Elit duis tristique sollicitudin nibh sit amet. Ultrices eros in
+              cursus turpis massa tincidunt. Venenatis urna cursus eget nunc
+              scelerisque viverra mauris in.</span
+            >
+          </p>
+        </div>
+      </div>
+      <div
+        class="lg:p-[32px_96px] p-[32px_40px] flex gap-[32px] shadow-[0px_4px_15px_0px_#0000001F] mb-[24px] rounded-xl"
+      >
+        <img
+          src="./assests/images/manworking.png"
+          alt=""
+          class="hidden lg:inline-block"
+        />
+        <div>
+          <b class="text-[20px]">Установка у клиента</b>
+          <hr
+            class="border-yellow-500 border-1 w-[86px] my-[24px] hidden md:block"
+          />
+          <p class="text-zinc-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.<span
+              class="hidden md:inline"
+              >Elit duis tristique sollicitudin nibh sit amet. Ultrices eros in
+              cursus turpis massa tincidunt. Venenatis urna cursus eget nunc
+              scelerisque viverra mauris in.</span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="xl:w-[1300px] w-[95%] mx-auto mb-[130px]">
+      <h2
+        class="font-semibold lg:text-[48px] mb-[90px] md:text-[44px] text-[28px]"
+      >
+        Нам доверяют
+      </h2>
+      <div
+        class="flex lg:flex-col justify-between items-center w-full mx-auto gap-5"
+      >
+        <div
+          class="flex flex-col lg:flex-row lg:divide-x-1 divide-zinc-300 lg:h-[183px] mb-[72px] gap-10 w-full"
+        >
+          <div class="flex flex-col items-center text-center w-full">
+            <img src="./assests/icons/logotip-rosatom 1.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Росатом</b>
+              <p class="text-[14px] text-zinc-600">
+                Корпорация атомной энергии
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full"
+          >
+            <img src="./assests/icons/gazprom.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Газпром</b>
+              <p class="text-[14px] text-zinc-600">Энергетическая компания</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full hidden md:inline-flex"
+          >
+            <img src="./assests/icons/rosneft.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Роснефть</b>
+              <p class="text-[14px] text-zinc-600">Нефтегазовая компания</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full hidden md:inline-flex"
+          >
+            <img src="./assests/icons/roskosmos.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Роскосмос</b>
+              <p class="text-[14px] text-zinc-600">
+                Корпорация в космической отрасли
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row lg:divide-x-1 divide-zinc-300 lg:h-[183px] mb-[72px] gap-10 w-full"
+        >
+          <div
+            class="flex flex-col justify-between items-center text-center w-full gap-10"
+          >
+            <img src="./assests/icons/lukoyl.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Лукойл</b>
+              <p class="text-[14px] text-zinc-600">Нефтегазовая компания</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full"
+          >
+            <img src="./assests/icons/inter.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Интер РАО</b>
+              <p class="text-[14px] text-zinc-600">Энергетическая компания</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full hidden md:inline-flex"
+          >
+            <img src="./assests/icons/rostech.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Ростех</b>
+              <p class="text-[14px] text-zinc-600">Промышленная корпорация</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between items-center text-center w-full hidden md:inline-flex"
+          >
+            <img src="./assests/icons/btb.png" alt="" />
+            <div>
+              <b class="text-[20px] text-zinc-800">Банк ВТБ</b>
+              <p class="text-[14px] text-zinc-600">Коммерческий банк</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="xl:w-[1300px] w-[95%] mx-auto mb-[130px]">
+      <h2
+        class="font-semibold lg:text-[48px] mb-[90px] md:text-[44px] text-[28px]"
+      >
+        Сотрудники компании
+      </h2>
+      <div class="grid md:grid-cols-2 gap-[24px_30px] grid-cols-1">
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026]"
+        >
+          <div
+            class="flex md:flex-col lg:gap-[40px] gap-3 lg:flex-row flex-row [40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img
+              src="./assests/images/suit.png"
+              alt=""
+              class="w-[100px] h-[100px] lg:w-[138px] lg:h-[138px] object-cover"
+            />
+            <div>
+              <b class="text-[20px]">Антон Макаров</b>
+              <p class="text-zinc-600">Руководитель компании</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026]"
+        >
+          <div
+            class="flex md:flex-col lg:flex-row gap-3 flex-row lg:gap-[40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img
+              src="./assests/images/shorthair.png"
+              alt=""
+              class="w-[100px] h-[100px] lg:w-[138px] lg:h-[138px] object-cover"
+            />
+            <div>
+              <b class="text-[20px]">Елена Валерьева</b>
+              <p class="text-zinc-600">Главный бухгалтер</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026]"
+        >
+          <div
+            class="flex md:flex-col lg:flex-row gap-3 flex-row lg:gap-[40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img
+              src="./assests/images/greeneye.png"
+              alt=""
+              class="w-[100px] h-[100px] lg:w-[138px] lg:h-[138px] object-cover"
+            />
+            <div>
+              <b class="text-[20px]">Иван Аркадьев</b>
+              <p class="text-zinc-600">Менеджер по закупкам</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026] hidden md:inline-flex"
+        >
+          <div
+            class="flex md:flex-col lg:flex-row gap-3 flex-row lg:gap-[40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img
+              src="./assests/images/smile.png"
+              alt=""
+              class="w-[100px] h-[100px] lg:w-[138px] lg:h-[138px] object-cover"
+            />
+            <div>
+              <b class="text-[20px]">Борис Вавилов</b>
+              <p class="text-zinc-600">бухгалтер</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026] hidden lg:inline-flex"
+        >
+          <div
+            class="flex gap-[40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img src="./assests/images/blone.png" alt="" />
+            <div>
+              <b class="text-[20px]">Алина Кравец</b>
+              <p class="text-zinc-600">Сотрудник отдела кадров</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-teal-600 flex justify-end w-[100%] rounded-[10px] shadow-[0px_4px_15px_0px_#00000026] hidden lg:inline-flex"
+        >
+          <div
+            class="flex gap-[40px] p-[32px] bg-white w-[90%] right-0 top-0 rounded-[0_10px_10px_0] h-[100%] border-none"
+          >
+            <img src="./assests/images/mustache.png" alt="" />
+            <div>
+              <b class="text-[20px]">Виктор Козуб</b>
+              <p class="text-zinc-600">Менеджер по закупкам</p>
+              <hr class="border-yellow-500 border-1 w-[86px] my-[16px_35px]" />
+              <div class="flex gap-[20px]">
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/instagram.svg" alt="" />
+                <img src="./assests/icons/linkedin.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="xl:w-[1300px] w-[95%] mx-auto">
+      <h2
+        class="font-semibold lg:text-[48px] mb-[90px] md:text-[44px] text-[28px]"
+      >
+        Наши контакты
+      </h2>
+      <div class="flex lg:justify-between flex-col gap-8 lg:flex-row">
+        <div class="flex flex-col gap-[44px]">
+          <div class="flex gap-[40px] items-center">
+            <img src="./assests/icons/tel.png" alt="" />
+            <div>
+              <p class="text-[14px] text-zinc-600">Телефон</p>
+              <b class="text-[20px]">+7 8422 99 666 5</b>
+            </div>
+          </div>
+          <div class="flex gap-[40px] items-center">
+            <img src="./assests/icons/msgs.png" alt="" />
+            <div>
+              <p class="text-[14px] text-zinc-600">E-mail</p>
+              <b class="text-[20px]">info@pdv.ooo</b>
+            </div>
+          </div>
+          <div class="flex gap-[40px] items-center">
+            <img src="./assests/icons/whatsapp.png" alt="" />
+            <div>
+              <p class="text-[14px] text-zinc-600">Whatsapp</p>
+              <b class="text-[20px]">+86 158 666 95 616</b>
+            </div>
+          </div>
+          <div class="flex gap-[40px] items-center">
+            <img src="./assests/icons/skype.png" alt="" />
+            <div>
+              <p class="text-[14px] text-zinc-600">Skype</p>
+              <b class="text-[20px]">sxy-bolts.cn</b>
+            </div>
+          </div>
+        </div>
+
+        <table
+          class="bg-zinc-100 p-[48px] lg:w-[60%] py-[70px] divide-y-1 text-left pl-[30px] rounded-[10px] mb-[46px] lg:h-[353px]"
+        >
+          <tr class="border-b-1 border-zinc-300 w-[80%] p-6">
+            <th class="text-zinc-600 font-[400] w-[40%] px-8 pt-5">
+              Полное наименование:
+            </th>
+            <td class="w-[60%]">
+              <b class="text-[10px] md:text-[16px]"
+                >ООО "Поставщик Дальнего Востока"</b
+              >
+            </td>
+          </tr>
+          <tr class="border-b-1 border-zinc-300 w-[80%] p-6">
+            <th class="text-zinc-600 font-[400] w-[40%] px-8">ИНН:</th>
+            <td class="w-[60%]">
+              <b class="text-[10px] md:text-[16px]">7329023100</b>
+            </td>
+          </tr>
+          <tr class="border-b-1 border-zinc-300 w-[80%]">
+            <th class="text-zinc-600 font-[400] w-[40%] px-8">КПП:</th>
+            <td class="w-[60%]">
+              <b class="text-[10px] md:text-[16px]">732901001</b>
+            </td>
+          </tr>
+          <tr class="border-b-1 border-zinc-300 w-[90%]">
+            <th class="text-zinc-600 font-[400] w-[40%] px-8">ОГРН:</th>
+            <td class="w-[60%]">
+              <b class="text-[10px] md:text-[16px]">1167325074762</b>
+            </td>
+          </tr>
+          <tr class="w-[90%]">
+            <th class="text-zinc-600 font-[400] w-[40%] px-8">Адрес:</th>
+            <td class="w-[60%] pr-3">
+              <b class="text-[10px] md:text-[16px]"
+                >Россия, Ульяновская обл, территория Портовой Особой
+                Экономической Зоны, проезд Первых Резидентов дом 3
+              </b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section
+      class="xl:w-[1300px] w-[95%] mx-auto mt-[46px] relative mb-[160px] lg:h-[667px] md:h-[400px] h-[200px]"
+    >
+      <img src="./assests/images/endingimg.png" alt="" class="w-[100%]" />
+      <div
+        class="bg-white absolute top-[50%] left-[50%] p-[12px] rounded-[50%] pl-5 hidden xl:inline-block"
+      >
+        <img src="./assests/icons/Polygon 1.png" alt="" class="w-[36px]" />
+      </div>
+      <div
+        class="flex flex-col gap-4 absolute top-[30%] right-[10%] hidden lg:inline-block"
+      >
+        <img src="./assests/icons/insta.svg" alt="" class="w-[16px]" />
+        <p class="text-white text-[13px]">+38 (099)-638-45-37</p>
+        <p class="uppercase text-white text-[13px] pl-4">
+          Персональная консультация
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-teal-600 md:pt-[80px] pt-[30px] pb-[30px] w-full">
+      <div class="xl:w-[1300px] w-[95vw] mx-auto">
+        <div class="flex lg:gap-[150px] justify-between flex-col md:flex-row">
+          <h1 class="lg:text-[60px] text-white text-[20px]">LOGO</h1>
+          <div class="flex lg:gap-[150px] gap-20 md:justify-start">
+            <div class="flex flex-col gap-3">
+              <a href="#" class="text-white">Каталог</a>
+              <a href="#" class="text-white">о компании</a>
+              <a href="#" class="text-white">Индивидуальная</a>
+              <a href="#" class="text-white">Партнерам</a>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <a href="#" class="text-white">2D, 3D модели</a>
+              <a href="#" class="text-white">Шоу-румы</a>
+              <a href="#" class="text-white">Дилерам</a>
+              <a href="#" class="text-white">Контакты</a>
+              <a href="#" class="text-white">Конфигуратор</a>
+            </div>
+          </div>
+          <div>
+            <div class="flex gap-[15px] mb-[90px]">
+              <div
+                class="border-2 border-white lg:w-[37px] lg:h-[37px] w-[10px] h-[10px] rounded-[50%]"
+              ></div>
+              <div
+                class="border-2 border-white lg:w-[37px] lg:h-[37px] w-[10px] h-[10px] rounded-[50%]"
+              ></div>
+            </div>
+            <form action="#" class="flex gap-0 justify-center w-full">
+              <input
+                type="text"
+                placeholder="EMAIL"
+                class="bg-orange-400 p-[12px_24px] pr-[80px] outline-none text-white"
+              />
+              <button class="bg-orange-400 pr-4">
+                <img src="./assests/images/Arrow 1.png" alt="" />
+              </button>
+            </form>
+          </div>
+        </div>
+        <p class="text-center mt-[80px] text-white md:text-[16px] text-[10px]">
+          © 1993–2021 Интернет-магазин «LOGO» — truck
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
